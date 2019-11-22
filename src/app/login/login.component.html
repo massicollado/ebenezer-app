@@ -3,18 +3,15 @@
     <img src="./src/img/logo.png">
   </p-header>
 
-  <div class="ui-inputgroup">
-    <span class="ui-inputgroup-addon"><i class="fa fa-user"></i></span>
-    <input type="text" pInputText placeholder="Usuario">
-    <div class="ui-inputgroup">
-      <span class="ui-inputgroup-addon"><i class="fa fa-user"></i></span>
-      <input type="text" pInputText placeholder="Contraseña">
-    </div>
+
+  <form   (ngSubmit) = "login(user.value, pass.value) " class="ui-inputgroup">
+    <input #user name="user" type="text" pInputText placeholder="Usuario">
+      <input #pass name="pass" type="text" pInputText placeholder="Contraseña">
 
     <div>
-      <button pButton type="button" label="INICIAR SESION" class="ui-button-raised"></button>
+      <button pButton type="submit" label="INICIAR SESION" class="ui-button-raised"></button>
       <button pButton type="button" label="¿Olvidaste tu contraseña?" class="ui-button-raised ui-button-secondary"></button>
 
     </div>
-  </div>
+  </form>
 </p-card>
